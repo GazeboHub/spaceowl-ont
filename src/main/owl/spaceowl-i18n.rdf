@@ -20,13 +20,13 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:i18n="http://gazebohub.github.io/ont/spaceowl-i18n.rdf#">
     <owl:Ontology rdf:about="http://gazebohub.github.io/ont/spaceowl-i18n.rdf">
-	<owl:versionIRI rdf:resource="http://gazebohub.github.io/ont/spaceowl-i18n-1.0.1.rdf"/>
-	<owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:versionIRI rdf:resource="http://gazebohub.github.io/ont/spaceowl-i18n-1.0.1.rdf"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -34,24 +34,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#srcRef -->
+
     <owl:AnnotationProperty rdf:about="&i18n;srcRef">
-	<rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:AnnotationProperty>
+    
 
 
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -59,27 +53,39 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#affiliation -->
+
+    <owl:ObjectProperty rdf:about="&i18n;affiliation">
+        <rdfs:label xml:lang="en">affiliation</rdfs:label>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#hasMember -->
 
     <owl:ObjectProperty rdf:about="&i18n;hasMember">
-	<rdfs:label xml:lang="en">has member</rdfs:label>
-	<rdfs:range rdf:resource="&foaf;Agent"/>
-	<rdfs:domain rdf:resource="&foaf;Group"/>
-	<owl:inverseOf rdf:resource="&foaf;member"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&i18n;affiliation"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+        <rdfs:domain rdf:resource="&foaf;Group"/>
+        <owl:inverseOf rdf:resource="&foaf;member"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://xmlns.com/foaf/0.1/member -->
 
-    <rdf:Description rdf:about="&foaf;member"/>
+    <rdf:Description rdf:about="&foaf;member">
+        <rdfs:subPropertyOf rdf:resource="&i18n;affiliation"/>
+    </rdf:Description>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -87,29 +93,29 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#Agency -->
 
     <owl:Class rdf:about="&i18n;Agency">
-	<rdfs:label xml:lang="en">Agency</rdfs:label>
-	<rdfs:subClassOf rdf:resource="&foaf;Group"/>
-	<rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+        <rdfs:label xml:lang="en">Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&foaf;Group"/>
+        <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
     </owl:Class>
-
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#SpaceAgency -->
 
     <owl:Class rdf:about="&i18n;SpaceAgency">
-	<rdfs:label xml:lang="en">Space Agency</rdfs:label>
-	<rdfs:subClassOf rdf:resource="&i18n;Agency"/>
+        <rdfs:label xml:lang="en">Space Agency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&i18n;Agency"/>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -117,253 +123,355 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Australia"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Canada"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#China -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#China"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#EU -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#EU"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#France -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#France"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Germany"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#India -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#India"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Italy"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Japan"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#Ukraine"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the"/>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#United_States_of_America -->
+
+    <owl:NamedIndividual rdf:about="http://aims.fao.org/aos/geopolitical.owl#United_States_of_America"/>
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ASI -->
 
     <owl:NamedIndividual rdf:about="&i18n;ASI">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">ASI</rdfs:label>
-	<foaf:name xml:lang="en">Italian Space Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">ASI</rdfs:label>
+        <foaf:name xml:lang="en">Italian Space Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Italy"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;ASI"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;ASI"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
-
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CNES -->
 
     <owl:NamedIndividual rdf:about="&i18n;CNES">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">CNES</rdfs:label>
-	<foaf:name xml:lang="fr">Centre National d&apos;Etudes Spatiales</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">CNES</rdfs:label>
+        <foaf:name xml:lang="fr">Centre National d&apos;Etudes Spatiales</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#France"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;CNES"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;CNES"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
-
+    
 
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CNSA -->
 
     <owl:NamedIndividual rdf:about="&i18n;CNSA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">CNSA</rdfs:label>
-	<foaf:name xml:lang="en">China National Space Administration</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">CNSA</rdfs:label>
+        <foaf:name xml:lang="en">China National Space Administration</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#China"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;CNSA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;CNSA"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
-
-<!--
-
+    
 
 
--->
-
-
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CSA -->
-
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CSA -->
 
     <owl:NamedIndividual rdf:about="&i18n;CSA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">CSA</rdfs:label>
-	<foaf:name xml:lang="en">Canadian Space Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">CSA</rdfs:label>
+        <foaf:name xml:lang="en">Canadian Space Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Canada"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;CSA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;CSA"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
+    
 
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CSIRO -->
 
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#CSIRO -->
 
     <owl:NamedIndividual rdf:about="&i18n;CSIRO">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">CSIRO</rdfs:label>
-	<foaf:name xml:lang="en">Commonwealth Scientific and Industrial Research Organisation</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">CSIRO</rdfs:label>
+        <foaf:name xml:lang="en">Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Australia"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;CSIRO"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;CSIRO"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
+    
 
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#DLR -->
 
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#DLR -->
 
     <owl:NamedIndividual rdf:about="&i18n;DLR">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">DLR</rdfs:label>
-	<foaf:name xml:lang="en">German Aerospace Center</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">DLR</rdfs:label>
+        <foaf:name xml:lang="en">German Aerospace Center</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Germany"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;DLR"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;DLR"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
+    
 
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ESA -->
 
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ESA -->
 
     <owl:NamedIndividual rdf:about="&i18n;ESA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">ESA</rdfs:label>
-	<foaf:name xml:lang="en">European Space Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">ESA</rdfs:label>
+        <foaf:name xml:lang="en">European Space Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#EU"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;ESA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedSource rdf:resource="&i18n;ESA"/>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
     </owl:Axiom>
+    
 
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ISRO -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;ISRO">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">ISRO</rdfs:label>
-	<foaf:name xml:lang="en">Indian Space Research Organisation</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;ISRO"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#JAXA -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;JAXA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">JAXA</rdfs:label>
-	<foaf:name xml:lang="en">Japan Aerospace Exploration Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;JAXA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#KARI -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;KARI">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">KARI</rdfs:label>
-	<foaf:name xml:lang="en">Korea Aerospace Research Institute</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;KARI"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#NASA -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;NASA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">NASA</rdfs:label>
-	<foaf:name xml:lang="en">National Aeronautics and Space Administration</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;NASA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#NSAU -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;NSAU">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">NSAU</rdfs:label>
-	<foaf:name xml:lang="en">National Space Agency Of Ukraine</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;NSAU"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#Roscosmos -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;Roscosmos">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">Roscosmos</rdfs:label>
-	<foaf:name xml:lang="en">Russian Federal Space Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;Roscosmos"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
-
-<!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#UKSA -->
-
-
-    <owl:NamedIndividual rdf:about="&i18n;UKSA">
-	<rdf:type rdf:resource="&i18n;SpaceAgency"/>
-	<rdfs:label xml:lang="en">UKSA</rdfs:label>
-	<foaf:name xml:lang="en">UK Space Agency</foaf:name>
-	<foaf:member rdf:resource="&i18n;ISECG"/>
-    </owl:NamedIndividual>
-    <owl:Axiom>
-	<srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
-	<owl:annotatedSource rdf:resource="&i18n;UKSA"/>
-	<owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
-	<owl:annotatedProperty rdf:resource="&foaf;member"/>
-    </owl:Axiom>
 
     <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ISECG -->
 
     <owl:NamedIndividual rdf:about="&i18n;ISECG">
-	<rdf:type rdf:resource="&i18n;Agency"/>
-	<rdfs:label xml:lang="en">ISECG</rdfs:label>
-	<foaf:name xml:lang="en">International Space Exploration Coordination Group</foaf:name>
+        <rdf:type rdf:resource="&i18n;Agency"/>
+        <rdfs:label xml:lang="en">ISECG</rdfs:label>
+        <foaf:name xml:lang="en">International Space Exploration Coordination Group</foaf:name>
     </owl:NamedIndividual>
+    
 
 
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#ISRO -->
+
+    <owl:NamedIndividual rdf:about="&i18n;ISRO">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">ISRO</rdfs:label>
+        <foaf:name xml:lang="en">Indian Space Research Organisation</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#India"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;ISRO"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#JAXA -->
+
+    <owl:NamedIndividual rdf:about="&i18n;JAXA">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">JAXA</rdfs:label>
+        <foaf:name xml:lang="en">Japan Aerospace Exploration Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Japan"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;JAXA"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#KARI -->
+
+    <owl:NamedIndividual rdf:about="&i18n;KARI">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">KARI</rdfs:label>
+        <foaf:name xml:lang="en">Korea Aerospace Research Institute</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;KARI"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#NASA -->
+
+    <owl:NamedIndividual rdf:about="&i18n;NASA">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">NASA</rdfs:label>
+        <foaf:name xml:lang="en">National Aeronautics and Space Administration</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#United_States_of_America"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;NASA"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#NSAU -->
+
+    <owl:NamedIndividual rdf:about="&i18n;NSAU">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">NSAU</rdfs:label>
+        <foaf:name xml:lang="en">National Space Agency Of Ukraine</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Ukraine"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;NSAU"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#Roscosmos -->
+
+    <owl:NamedIndividual rdf:about="&i18n;Roscosmos">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">Roscosmos</rdfs:label>
+        <foaf:name xml:lang="en">Russian Federal Space Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;Roscosmos"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://gazebohub.github.io/ont/spaceowl-i18n.rdf#UKSA -->
+
+    <owl:NamedIndividual rdf:about="&i18n;UKSA">
+        <rdf:type rdf:resource="&i18n;SpaceAgency"/>
+        <rdfs:label xml:lang="en">UKSA</rdfs:label>
+        <foaf:name xml:lang="en">UK Space Agency</foaf:name>
+        <affiliation rdf:resource="http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the"/>
+        <foaf:member rdf:resource="&i18n;ISECG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <srcRef rdf:datatype="&xsd;anyURI">http://www.globalspaceexploration.org/members</srcRef>
+        <owl:annotatedTarget rdf:resource="&i18n;ISECG"/>
+        <owl:annotatedSource rdf:resource="&i18n;UKSA"/>
+        <owl:annotatedProperty rdf:resource="&foaf;member"/>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
