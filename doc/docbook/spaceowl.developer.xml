@@ -9,26 +9,102 @@
      >
   <title>&project; Developer Documentation</title>
 
-  <part xml:id="&projid;.devel.admin">
+  <part xml:id="&projid;.dev.admin">
     <title>&project; Developer Administrative Documentation</title>
 
-      <chapter xml:id="&projid;.devel.admin.avail">
-        <title>Availability</title>
-        <para> </para>
-      </chapter>
+    <chapter xml:id="&projid;.dev.admin.struct">
+      <title>Project Structure</title>
 
-      <chapter xml:id="&projid;.devel.admin.plat">
+      <para>
+        The functional baseline of the &project; project is
+        currently managed via the <systemitem
+        class="systemname">spaceowl-ont</systemitem> project.
+      </para>
+
+      <sidebar>
+	<title>Related Resources</title>
+	<simplelist>
+	  <member><xref
+	  linkend="&projid;.dev.admin.avail"/></member>
+	</simplelist>
+      </sidebar>
+    </chapter>
+
+
+    <chapter xml:id="&projid;.dev.admin.avail">
+      <title>Availability</title>
+
+      <para>
+        The &project; Ontologies component is hosted at &github;,
+        within the organizational space of the &ghub; project. The
+        source code of the project is available via &git;.
+      </para>
+
+      <segmentedlist>
+        <segtitle>Project</segtitle>
+        <segtitle>Source View</segtitle>
+        <segtitle>Source URL (Anonymous Access)</segtitle>
+        <segtitle>Source URL (Developer Access)</segtitle>
+        <seglistitem>
+          <seg>&project; Ontologies</seg>
+          <seg><systemitem
+                   class="systemname"
+                   xlink:href="https://github.com/GazeboHub/spaceowl-ont"
+                   >https://github.com/GazeboHub/spaceowl-ont</systemitem></seg>
+          <seg><systemitem
+                   class="systemname"
+                   >https://github.com/GazeboHub/spaceowl-ont.git</systemitem></seg>
+          <seg><systemitem
+                   class="systemname"
+                   >git@github.com:GazeboHub/spaceowl-ont.git</systemitem></seg>
+        </seglistitem>
+      </segmentedlist>
+
+
+        <sidebar>
+          <title>Related Resources</title>
+          <!-- FIXME: Move these items to a SPEM-like "toolDefinition"
+               refentry page -->
+          <simplelist>
+            <member>
+              <link xlink:href="http://git-scm.com/"
+                    >&git; &ndash; official website</link>
+            </member>
+            <member>
+              <xref linkend="bib.devel.pro-git"/>, available online,
+              in eBook format, and in print formats
+            </member>
+            <member>
+              <link
+                  xlink:href="http://git-scm.com/downloads/guis"
+                  >&git; &dash; GUI Clients</link></member>
+            <member>
+              <link
+                  xlink:href="http://www.eclipse.org/jgit/"
+                  ><productname>JGit</productname></link>
+              &ndash; &java; &git; implementation supported in
+              &eclipseIDE; <glossterm>team</glossterm> components
+            </member>
+          </simplelist>
+    </chapter>
+
+<!--
+      <chapter xml:id="&projid;.dev.admin.plat">
         <title>Supported Platforms</title>
         <para> </para>
       </chapter>
+-->
 
-      <chapter xml:id="&projid;.devel.admin.status">
+<!--
+      <chapter xml:id="&projid;.dev.admin.status">
         <title>Status of the Codebase</title>
         <para> </para>
       </chapter>
+-->
   </part>
 
-  <part xml:id="&projid;.devel.plan">
+<!--
+  <part xml:id="&projid;.dev.plan">
     <title>Research and Development Planning</title>
     <chapter>
       <title>General "To Do"</title>
@@ -40,16 +116,17 @@
       </itemizedlist>
     </chapter>
   </part>
+-->
 
-  <part xml:id="&projid;.devel.ref">
-    <title>&project; Developer's Reference</title>
+  <!-- <part xml:id="&projid;.dev.ref"> -->
+  <!--   <title>&project; Developer's Reference</title> -->
 
-    <chapter>
-      <title>Foo</title>
-    </chapter>
+  <!--   <chapter> -->
+  <!--     <title>Foo (Template Chapter)</title> -->
+  <!--   </chapter> -->
 
-    <reference>
-      <title>Foo Dictionary</title>
+  <!--   <reference> -->
+  <!--     <title>Foo Dictionary (Template Reference)</title> -->
     <!-- CLASS REFENTRY TEMPLATE
 
       <refentry xml:id="ref.&projid;.foo.c">
@@ -79,6 +156,23 @@
 
     -->
 
-    </reference>
-  </part>
+  <!--   </reference> -->
+  <!-- </part> -->
+  <bibliography>
+    <title>Works Referenced</title>
+
+    <biblioentry xlink:href="bib.devel.pro-git" xreflabel="GITBOOK">
+      <citetitle>
+        <link xlink:href="http://git-scm.com/book"
+              >Pro Git</link></citetitle>
+      <author>
+        <personname>Scott Chacon</personname>
+      </author>
+      <publisher>
+        <publishername>Apress</publishername>
+      </publisher>
+      <pubdate>2009</pubdate>
+    </biblioentry>
+  </bibliography>
+
 </book>

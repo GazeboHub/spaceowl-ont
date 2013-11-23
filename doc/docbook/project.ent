@@ -5,3 +5,27 @@
 <!ENTITY projid
         'spaceowl'
 >
+
+<!-- orgs -->
+
+<!ENTITY github
+        '<orgname>GitHub</orgname>'
+>
+
+<!ENTTY ghub
+        '<orgname>Gazebo Hub</orgname>'
+>
+
+<!-- software components / tools -->
+
+<!ENTITY git
+        '<productname>Git</productname>'
+>
+
+<!ENTITY java
+        '<productname class="trade">Java</productname>'
+>
+
+<!ENTITY eclipseIDE
+        '<productname>Eclipse IDE</productname>'
+>
