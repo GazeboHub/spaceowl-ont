@@ -8,12 +8,50 @@
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xml:id="&projid;.project"
       >
-  <title>&project; Project Documentation</title>
+  <info>
+      <title>&project; Project Documentation</title>
+      <revhistory>
+        <revision>
+          <date>2013-11-22</date>
+          <revremark>First draft</revremark>
+        </revision>
+      </revhistory>
+      <authorgroup>
+        <author>
+          <personname>Sean Champ</personname>
+        </author>
+      </authorgroup>
+  </info>
 
 
-  <chapter>
-    <title>&project; Project Administration &ndash; Overview</title>
-    <para> </para>
-  </chapter>
+  <preface xml:id="&projid;.project.">
+    <title>Summary</title>
+
+    <para>
+      The &project; project endeavors to develop practical software
+      system components for application in a context of
+      <glossterm>knowledge management</glossterm>, in the epoch of
+      the emerging <glossterm>NewSpace</glossterm> industry.
+    </para>
+
+    <sidebar>
+      <title>Commentary</title>
+      <para>
+        Considering the veritable wealth of practical
+        <glossterm>knowledge resources</glossterm> currently available
+        to current and future scientists and engineers with careers in
+        and practical interests towards space science and space
+        exploration, it's a broad field that the &project; project
+        endeavors to address. This project proposes to address the
+        material of fields in space-related science and engineering
+        through a development of careful practice and documentation,
+        in developing an emergent, adaptable, moreover transparent
+        <glossterm>knowledge model</glossterm>, such that shall form
+        the essential <glossterm>ontology core</glossterm> of the
+        &project; project.
+      </para>
+    </sidebar>
+
+  </preface>
 
 </book>
