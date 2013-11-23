@@ -1,6 +1,13 @@
+# Text
+*~
+*#
+# Eclipse
+.settings
+# Java
 *.class
-
-# Package Files #
+## Package Files
 *.jar
 *.war
 *.ear
+# Protege
+catalog-v001.xml

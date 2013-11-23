@@ -1,0 +1,16 @@
+<!DOCTYPE book [
+<!ENTITY % project.ent SYSTEM "project.ent">
+%project.ent;
+]>
+<book xmlns="http://docbook.org/ns/docbook"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xml:id="&projid;.project"
+     >
+  <title>&project; Project Documentation</title>
+  <chapter>
+    <title>&project; Project Administration &ndash; Overview</title>
+    <para> </para>
+  </chapter>
+
+</book>
