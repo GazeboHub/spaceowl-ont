@@ -7,7 +7,22 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      xml:id="&projid;.devel"
      >
-  <title>&project; Developer Documentation</title>
+  <info>
+    <title>&project; Developer Documentation</title>
+      <revhistory>
+        <revision>
+          <date>2013-11-22</date>
+          <revremark>First draft</revremark>
+        </revision>
+      </revhistory>
+      <authorgroup>
+        <author>
+          <personname>Sean Champ</personname>
+        </author>
+      </authorgroup>
+  </info>
+
+
 
   <part xml:id="&projid;.dev.admin">
     <title>&project; Developer Administrative Documentation</title>
@@ -171,6 +186,14 @@ Related Work:
 
   <!--   </reference> -->
   <!-- </part> -->
+
+
+  <part>
+    <title>Development Articles</title>
+
+    <xi:include href="article.km-spice.xml">
+  </part>
+
   <bibliography>
     <title>Works Referenced</title>
 
