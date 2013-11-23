@@ -22,11 +22,11 @@
       </para>
 
       <sidebar>
-	<title>Related Resources</title>
-	<simplelist>
-	  <member><xref
-	  linkend="&projid;.dev.admin.avail"/></member>
-	</simplelist>
+        <title>Related Resources</title>
+        <simplelist>
+          <member><xref
+          linkend="&projid;.dev.admin.avail"/></member>
+        </simplelist>
       </sidebar>
     </chapter>
 
@@ -64,7 +64,20 @@
         <sidebar>
           <title>Related Resources</title>
           <!-- FIXME: Move these items to a SPEM-like "toolDefinition"
-               refentry page -->
+               refentry page, as in one for each of:
+
+1) git (commandlineToolDefinition, subclass of toolDefinition)
+2) Protege (graphicalToolDefinition, subclass of toolDefinition)
+3) OWL (it qualifies as a specification, in a subclass of toolDefinition)
+
+First:
+1) Transpose the SPEM metamodel into Eclipse Papyrus
+
+Related Work:
+1) OWL to IDL transform
+2) UML to IDL transform (?)
+
+ -->
           <simplelist>
             <member>
               <link xlink:href="http://git-scm.com/"
