@@ -29,3 +29,8 @@
 <!ENTITY eclipseIDE
         '<productname>Eclipse IDE</productname>'
 >
+
+
+<!ENTTY spice
+        '<productname>SPICE</productname>'
+>

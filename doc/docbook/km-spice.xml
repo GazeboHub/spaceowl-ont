@@ -1,0 +1,122 @@
+<!DOCTYPE article [
+<!ENTITY % project.ent SYSTEM "../project.ent">
+%project.ent;
+]>
+<article
+    version="sbook-1.0"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:id="article.km-spice"
+  >
+  <info>
+    <title>
+      Integrating &spice; into an Ontology-Focused
+      Knowledge Resource Management Framework
+    </title>
+    <author>
+      <personname>Sean Champ</personname>
+    </author>
+    <revhistory>
+      <revision>
+        <date>2013-11-22</date>
+        <revremark>First draft</revremark>
+      </revision>
+    </revhistory>
+  </info>
+
+
+  <section>
+    <title>Context</title>
+
+<!--
+# RDF and OWL as Recent Items in KM Technology Development
+
+1. RDF
+2. OWL
+3. (Presetational Semantics for OWL - needs work. See also, Protege)
+
+[big stretch]
+
+# Asteroids
+
+## Asteroid Mining - Commercial Interests
+
+### Companies
+
+1. Planetary Resources
+2. Deep Space Industries
+
+### Technologies
+
+Cubesats
+...and the future...
+
+
+## Proposals for Asteroid Detection, Interception, and Diversion
+
+### Monitoring
+
+Sentinel (B612 Foundation)
+...[others. See Wikipedia]
+
+
+# SPICE - Applications
+
+1. Vehicle telemetry
+2. Orbital dynamics of solar system objects
+   * This is where SPICE may clearly begin to dovetail with the asteroid concerns
+
+# Possible New Directions for SPICE
+
+### SPICE CORBA
+
+1. Develop IDL interface definitions for network access to SPICE data
+   sets via the platform-agnostic CORBA IIOP protocol
+
+### SPICE + OWL
+
+(An initial goal of the spice-km focus in the SpaceOWL Project)
+
+-->
+
+<!-- END OF OUTLINE -->
+  </section>
+
+
+
+<!--
+Resources
+
+* NSSDC NMC - for unique identification of "Space Vehicles"
+
+* SPICE - for Space Vehicle Telemetry [bib.km-spice.spice-ov]
+  * Existing Datasets (vehicles, solar system objects)
+    see http://naif.jpl.nasa.gov/naif/data.html
+
+* ???? - for Availability of "Live" Space Object Data in Machine
+  Readable Formats (?)
+
+* NASA _Eyes on the Solar System_, for "Live" Human-Legible Space Object
+  Information
+
+
+-->
+
+  <bibliography>
+    <title>Works Referenced</title>
+
+    <biblioentry xml:id="bib.km-spice.spice-ov" xreflabel="SPICE Overview">
+      <citetitle>
+      <link
+          xlink:href="http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/04_spice_overview.pdf"
+          >An Overview of SPICE</link></citetitle>
+      <publisher>
+        <publishername>Navigation and Ancillary Information
+        Facility</publishername>
+      </publisher>
+      <pubdate>July 2013</pubdate>
+    </biblioentry>
+  </bibliography>
+
+</article>
