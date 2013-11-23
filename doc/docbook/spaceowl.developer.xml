@@ -2,7 +2,7 @@
 <!ENTITY % project.ent SYSTEM "project.ent">
 %project.ent;
 ]>
-<book xmlns="http://docbook.org/ns/docbook"
+<book version="sbook-1.0" xmlns="http://docbook.org/ns/docbook"
      xmlns:xi="http://www.w3.org/2001/XInclude"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      xml:id="&projid;.devel"
